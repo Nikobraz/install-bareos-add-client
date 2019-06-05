@@ -1,0 +1,8 @@
+---
+
+- hosts: SUZ
+  become: true
+  become_method: sudo
+  roles:
+    - stancel.install-bareos-client 
+

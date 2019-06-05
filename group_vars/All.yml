@@ -1,0 +1,6 @@
+ansible_connection: ssh
+ansible_user: extadmin
+ansible_ssh_pass: CHAI{}":@1
+ansible_become: yes
+ansible_become_method: sudo
+ansible_sudo_pass: CHAI{}":@1
