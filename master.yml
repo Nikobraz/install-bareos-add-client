@@ -4,5 +4,5 @@
   become: true
   become_method: sudo
   roles:
-    - stancel.install-bareos-client 
+    - install-bareos-add-client 
 
