@@ -51,7 +51,13 @@
     repo: "deb http://download.bareos.org/bareos/release/latest/xUbuntu_{{ install_bareos_client_bareos_ubuntu_install_version }}/ /\n" 
     state: present
     update_cache: yes
-
+    
+- name: "Update Apt package list and install Bareos client"
+  apt: name={{ item }} state=present allow_unauthenticated=yes update_cache=yes
+  with_items:
+    - bareos-filedaemon
+    - bareos-client
+   
 - name: "Creating client directory"
   file:
     path: /etc/bareos/bareos-fd.d/client
